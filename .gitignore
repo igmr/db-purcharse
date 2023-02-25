@@ -1,0 +1,56 @@
+#-------------------------
+# System Operation
+#-------------------------
+
+# OS X
+#-------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# windows
+#-------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+#-------------------------
+*~
+.Trash-*
+
+$RECYCLE.BIN/
+
+#-------------------------
+# IDE
+#-------------------------
+
+# Jetbrains editors
+#-------------------------
+.idea/
+*.iml
+
+# Netbeans
+#-------------------------
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
+# Sublime Text
+#-------------------------
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/api/
+
+# Visual Studio Code
+#-------------------------
+.vscode/
