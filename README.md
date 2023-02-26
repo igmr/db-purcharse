@@ -46,17 +46,22 @@ CREATE TABLE IF NOT EXISTS providers
 DROP TABLE IF EXISTS products;
 CREATE TABLE IF NOT EXISTS products
 (
-  id           INT           NOT NULL  AUTO_INCREMENT,
-  code         VARCHAR(65)   NOT NULL,
-  name         VARCHAR(255)  NOT NULL,
-  description  VARCHAR(255)      NULL  DEFAULT NULL,
-  departament  VARCHAR(255)      NULL  DEFAULT NULL,
-  price        DOUBLE            NULL  DEFAULT 1,
-  created_at   DATETIME      NOT NULL  DEFAULT NOW(),
-  updated_at   DATETIME          NULL  DEFAULT NULL,
-  deleted_at   DATETIME          NULL  DEFAULT NULL,
-  CONSTRAINT   pkProduct     PRIMARY KEY(id),
-  CONSTRAINT   ukProduct     UNIQUE(code, name)
+  id            INT           NOT NULL  AUTO_INCREMENT,
+  code          VARCHAR(65)   NOT NULL,
+  description   VARCHAR(255)  NOT NULL,
+  category      VARCHAR(255)      NULL  DEFAULT NULL,
+  brand         VARCHAR(255)      NULL  DEFAULT NULL,
+  type_product  VARCHAR(15)   NOT NULL  DEFAULT 'Product',
+  unit          VARCHAR(65)   NOT NULL  DEFAULT 'Pieza',
+  color         VARCHAR(65)       NULL  DEFAULT NULL,
+  weight        DOUBLE            NULL  DEFAULT 0,
+  price         DOUBLE            NULL  DEFAULT 0,
+  size          DOUBLE            NULL  DEFAULT 0,
+  created_at    DATETIME      NOT NULL  DEFAULT NOW(),
+  updated_at    DATETIME          NULL  DEFAULT NULL,
+  deleted_at    DATETIME          NULL  DEFAULT NULL,
+  CONSTRAINT    pkProduct     PRIMARY KEY(id),
+  CONSTRAINT    ukProduct     UNIQUE(code, description)
 );
 
 -- -------------------------------------------------
